@@ -1,0 +1,188 @@
+const images = [
+  {   filter: 'manufacturing', "image-url": "/Manu.png" ,special: "yes" },
+  { _id: 1, filter: 'manufacturing', "image-url": "/New folder/Pictures/1/9.jpg", "rel-image1": "/New folder/Pictures/1/10.jpg", "rel-image2": "/New folder/Pictures/1/11.jpg", "rel-image3": "/New folder/Pictures/1/11.jpg" },
+  { _id: 2, filter: 'manufacturing', "image-url": "/New folder/Pictures/3/1.jpg", "rel-image1": "/New folder/Pictures/3/2.jpg", "rel-image2": "/New folder/Pictures/3/4.jpg", "rel-image3": "/New folder/Pictures/3/4.jpg" },
+  { _id: 3, filter: 'manufacturing', "image-url": "/New folder/Pictures/7/1.jpg", "rel-image1": "/New folder/Pictures/7/2.jpg", "rel-image2": "/New folder/Pictures/7/3.jpg", "rel-image3": "/New folder/Pictures/1/11.jpg" },
+  { _id: 4, filter: 'manufacturing', "image-url": "/New folder/Pictures/4/5.jpg", "rel-image1": "/New folder/Pictures/4/6.jpg", "rel-image2": "/New folder/Pictures/4/7.jpg", "rel-image3": "/New folder/Pictures/1/11.jpg" },
+  { _id: 5, filter: 'manufacturing', "image-url": "/New folder/Pictures/9/1.jpg", "rel-image1": "/New folder/Pictures/9/4.jpg", "rel-image2": "/New folder/Pictures/9/2.jpg", "rel-image3": "/New folder/Pictures/9/3.jpg" },
+  { _id: 6, filter: 'manufacturing', "image-url": "/New folder/Pictures/8/2.jpg", "rel-image1": "/New folder/Pictures/8/4.jpg", "rel-image2": "/New folder/Pictures/8/6.jpg", "rel-image3": "/New folder/Pictures/8/5.jpg" },
+  { _id: 7, filter: 'manufacturing', "image-url": "/New folder/Pictures/1/9.jpg", "rel-image1": "/New folder/Pictures/1/10.jpg", "rel-image2": "/New folder/Pictures/1/11.jpg", "rel-image3": "/New folder/Pictures/1/11.jpg" },
+  { _id: 8, filter: 'manufacturing', "image-url": "/New folder/Pictures/3/1.jpg", "rel-image1": "/New folder/Pictures/3/2.jpg", "rel-image2": "/New folder/Pictures/3/4.jpg", "rel-image3": "/New folder/Pictures/3/4.jpg" },
+  { _id: 9, filter: 'manufacturing', "image-url": "/New folder/Pictures/7/1.jpg", "rel-image1": "/New folder/Pictures/7/2.jpg", "rel-image2": "/New folder/Pictures/7/3.jpg", "rel-image3": "/New folder/Pictures/1/11.jpg" },
+  { _id: 10, filter: 'manufacturing', "image-url": "/New folder/Pictures/4/5.jpg", "rel-image1": "/New folder/Pictures/4/6.jpg", "rel-image2": "/New folder/Pictures/4/7.jpg", "rel-image3": "/New folder/Pictures/1/11.jpg" },
+  { _id: 11, filter: 'manufacturing', "image-url": "/New folder/Pictures/9/1.jpg", "rel-image1": "/New folder/Pictures/9/4.jpg", "rel-image2": "/New folder/Pictures/9/2.jpg", "rel-image3": "/New folder/Pictures/9/3.jpg" },
+  { _id: 12, filter: 'manufacturing', "image-url": "/New folder/Pictures/8/2.jpg", "rel-image1": "/New folder/Pictures/8/4.jpg", "rel-image2": "/New folder/Pictures/8/6.jpg", "rel-image3": "/New folder/Pictures/8/5.jpg" },
+  { _id: 13, filter: 'manufacturing', "image-url": "/New folder/Pictures/1/9.jpg", "rel-image1": "/New folder/Pictures/1/10.jpg", "rel-image2": "/New folder/Pictures/1/11.jpg", "rel-image3": "/New folder/Pictures/1/11.jpg" },
+  { _id: 14, filter: 'manufacturing', "image-url": "/New folder/Pictures/3/1.jpg", "rel-image1": "/New folder/Pictures/3/2.jpg", "rel-image2": "/New folder/Pictures/3/4.jpg", "rel-image3": "/New folder/Pictures/3/4.jpg" },
+  { _id: 15, filter: 'manufacturing', "image-url": "/New folder/Pictures/7/1.jpg", "rel-image1": "/New folder/Pictures/7/2.jpg", "rel-image2": "/New folder/Pictures/7/3.jpg", "rel-image3": "/New folder/Pictures/1/11.jpg" },
+  { _id: 16, filter: 'manufacturing', "image-url": "/New folder/Pictures/4/5.jpg", "rel-image1": "/New folder/Pictures/4/6.jpg", "rel-image2": "/New folder/Pictures/4/7.jpg", "rel-image3": "/New folder/Pictures/1/11.jpg" },
+  { _id: 17, filter: 'manufacturing', "image-url": "/New folder/Pictures/9/1.jpg", "rel-image1": "/New folder/Pictures/9/4.jpg", "rel-image2": "/New folder/Pictures/9/2.jpg", "rel-image3": "/New folder/Pictures/9/3.jpg" },
+  { _id: 18, filter: 'manufacturing', "image-url": "/New folder/Pictures/8/2.jpg", "rel-image1": "/New folder/Pictures/8/4.jpg", "rel-image2": "/New folder/Pictures/8/6.jpg", "rel-image3": "/New folder/Pictures/8/5.jpg" },
+  { _id: 19, filter: 'manufacturing', "image-url": "/New folder/Pictures/1/9.jpg", "rel-image1": "/New folder/Pictures/1/10.jpg", "rel-image2": "/New folder/Pictures/1/11.jpg", "rel-image3": "/New folder/Pictures/1/11.jpg" },
+  { _id: 20, filter: 'manufacturing', "image-url": "/New folder/Pictures/3/1.jpg", "rel-image1": "/New folder/Pictures/3/2.jpg", "rel-image2": "/New folder/Pictures/3/4.jpg", "rel-image3": "/New folder/Pictures/3/4.jpg" },
+  { _id: 21, filter: 'manufacturing', "image-url": "/New folder/Pictures/7/1.jpg", "rel-image1": "/New folder/Pictures/7/2.jpg", "rel-image2": "/New folder/Pictures/7/3.jpg", "rel-image3": "/New folder/Pictures/1/11.jpg" },
+  { _id: 22, filter: 'manufacturing', "image-url": "/New folder/Pictures/4/5.jpg", "rel-image1": "/New folder/Pictures/4/6.jpg", "rel-image2": "/New folder/Pictures/4/7.jpg", "rel-image3": "/New folder/Pictures/1/11.jpg" },
+  { _id: 23, filter: 'manufacturing', "image-url": "/New folder/Pictures/9/1.jpg", "rel-image1": "/New folder/Pictures/9/4.jpg", "rel-image2": "/New folder/Pictures/9/2.jpg", "rel-image3": "/New folder/Pictures/9/3.jpg" },
+  { _id: 24, filter: 'manufacturing', "image-url": "/New folder/Pictures/8/2.jpg", "rel-image1": "/New folder/Pictures/8/4.jpg", "rel-image2": "/New folder/Pictures/8/6.jpg", "rel-image3": "/New folder/Pictures/8/5.jpg" },
+  { _id: 25, filter: 'manufacturing', "image-url": "/New folder/Pictures/1/9.jpg", "rel-image1": "/New folder/Pictures/1/10.jpg", "rel-image2": "/New folder/Pictures/1/11.jpg", "rel-image3": "/New folder/Pictures/1/11.jpg" },
+  { _id: 26, filter: 'manufacturing', "image-url": "/New folder/Pictures/3/1.jpg", "rel-image1": "/New folder/Pictures/3/2.jpg", "rel-image2": "/New folder/Pictures/3/4.jpg", "rel-image3": "/New folder/Pictures/3/4.jpg" },
+  { _id: 27, filter: 'manufacturing', "image-url": "/New folder/Pictures/7/1.jpg", "rel-image1": "/New folder/Pictures/7/2.jpg", "rel-image2": "/New folder/Pictures/7/3.jpg", "rel-image3": "/New folder/Pictures/1/11.jpg" },
+  { _id: 28, filter: 'manufacturing', "image-url": "/New folder/Pictures/4/5.jpg", "rel-image1": "/New folder/Pictures/4/6.jpg", "rel-image2": "/New folder/Pictures/4/7.jpg", "rel-image3": "/New folder/Pictures/1/11.jpg" },
+  { _id: 29, filter: 'manufacturing', "image-url": "/New folder/Pictures/9/1.jpg", "rel-image1": "/New folder/Pictures/9/4.jpg", "rel-image2": "/New folder/Pictures/9/2.jpg", "rel-image3": "/New folder/Pictures/9/3.jpg" },
+  { _id: 30, filter: 'manufacturing', "image-url": "/New folder/Pictures/8/2.jpg", "rel-image1": "/New folder/Pictures/8/4.jpg", "rel-image2": "/New folder/Pictures/8/6.jpg", "rel-image3": "/New folder/Pictures/8/5.jpg" },
+  { _id: 31, filter: 'manufacturing', "image-url": "/New folder/Pictures/1/9.jpg", "rel-image1": "/New folder/Pictures/1/10.jpg", "rel-image2": "/New folder/Pictures/1/11.jpg", "rel-image3": "/New folder/Pictures/1/11.jpg" },
+  { _id: 32, filter: 'manufacturing', "image-url": "/New folder/Pictures/3/1.jpg", "rel-image1": "/New folder/Pictures/3/2.jpg", "rel-image2": "/New folder/Pictures/3/4.jpg", "rel-image3": "/New folder/Pictures/3/4.jpg" },
+  { _id: 33, filter: 'manufacturing', "image-url": "/New folder/Pictures/7/1.jpg", "rel-image1": "/New folder/Pictures/7/2.jpg", "rel-image2": "/New folder/Pictures/7/3.jpg", "rel-image3": "/New folder/Pictures/1/11.jpg" },
+  { _id: 34, filter: 'manufacturing', "image-url": "/New folder/Pictures/4/5.jpg", "rel-image1": "/New folder/Pictures/4/6.jpg", "rel-image2": "/New folder/Pictures/4/7.jpg", "rel-image3": "/New folder/Pictures/1/11.jpg" },
+  { _id: 35, filter: 'manufacturing', "image-url": "/New folder/Pictures/9/1.jpg", "rel-image1": "/New folder/Pictures/9/4.jpg", "rel-image2": "/New folder/Pictures/9/2.jpg", "rel-image3": "/New folder/Pictures/9/3.jpg" },
+  { _id: 36, filter: 'manufacturing', "image-url": "/New folder/Pictures/8/2.jpg", "rel-image1": "/New folder/Pictures/8/4.jpg", "rel-image2": "/New folder/Pictures/8/6.jpg", "rel-image3": "/New folder/Pictures/8/5.jpg" },
+ 
+ 
+ //////////////////////////////////////////////////////////Design/////////////////////////////////////////////////////////
+  {   filter: 'Design', "image-url": "/design.png" ,special: "yes" },
+  { _id: 37,  filter: 'Design', "image-url": "/category 1/main.jpg", "rel-image1": "/category 1/ws1.jpg", "rel-image2": "/category 1/ws2.jpg", "rel-image3": "/category 1/ws3.jpg" },
+  { _id: 38, filter: 'Design', "image-url": "/cetegory 2/main.jpeg", "rel-image1": "/cetegory 2/bs1_1.jpeg", "rel-image2": "/cetegory 2/bs2_1 (1).jpeg", "rel-image3": "/cetegory 2/bs4.jpg" },
+  { _id: 39,  filter: 'Design', "image-url": "/category 1/main.jpg", "rel-image1": "/category 1/ws1.jpg", "rel-image2": "/category 1/ws2.jpg", "rel-image3": "/category 1/ws3.jpg" },
+  { _id: 40, filter: 'Design', "image-url": "/cetegory 2/main.jpeg", "rel-image1": "/cetegory 2/bs1_1.jpeg", "rel-image2": "/cetegory 2/bs2_1 (1).jpeg", "rel-image3": "/cetegory 2/bs4.jpg" },
+  { _id: 41,  filter: 'Design', "image-url": "/category 1/main.jpg", "rel-image1": "/category 1/ws1.jpg", "rel-image2": "/category 1/ws2.jpg", "rel-image3": "/category 1/ws3.jpg" },
+  { _id: 42, filter: 'Design', "image-url": "/cetegory 2/main.jpeg", "rel-image1": "/cetegory 2/bs1_1.jpeg", "rel-image2": "/cetegory 2/bs2_1 (1).jpeg", "rel-image3": "/cetegory 2/bs4.jpg" },
+  { _id: 43,  filter: 'Design', "image-url": "/category 1/main.jpg", "rel-image1": "/category 1/ws1.jpg", "rel-image2": "/category 1/ws2.jpg", "rel-image3": "/category 1/ws3.jpg" },
+  { _id: 44, filter: 'Design', "image-url": "/cetegory 2/main.jpeg", "rel-image1": "/cetegory 2/bs1_1.jpeg", "rel-image2": "/cetegory 2/bs2_1 (1).jpeg", "rel-image3": "/cetegory 2/bs4.jpg" },
+  { _id: 45,  filter: 'Design', "image-url": "/category 1/main.jpg", "rel-image1": "/category 1/ws1.jpg", "rel-image2": "/category 1/ws2.jpg", "rel-image3": "/category 1/ws3.jpg" },
+  { _id: 46, filter: 'Design', "image-url": "/cetegory 2/main.jpeg", "rel-image1": "/cetegory 2/bs1_1.jpeg", "rel-image2": "/cetegory 2/bs2_1 (1).jpeg", "rel-image3": "/cetegory 2/bs4.jpg" },
+  { _id: 47,  filter: 'Design', "image-url": "/category 1/main.jpg", "rel-image1": "/category 1/ws1.jpg", "rel-image2": "/category 1/ws2.jpg", "rel-image3": "/category 1/ws3.jpg" },
+  { _id: 48, filter: 'Design', "image-url": "/cetegory 2/main.jpeg", "rel-image1": "/cetegory 2/bs1_1.jpeg", "rel-image2": "/cetegory 2/bs2_1 (1).jpeg", "rel-image3": "/cetegory 2/bs4.jpg" },
+  { _id: 49,  filter: 'Design', "image-url": "/category 1/main.jpg", "rel-image1": "/category 1/ws1.jpg", "rel-image2": "/category 1/ws2.jpg", "rel-image3": "/category 1/ws3.jpg" },
+  { _id: 50, filter: 'Design', "image-url": "/cetegory 2/main.jpeg", "rel-image1": "/cetegory 2/bs1_1.jpeg", "rel-image2": "/cetegory 2/bs2_1 (1).jpeg", "rel-image3": "/cetegory 2/bs4.jpg" },
+  { _id: 51,  filter: 'Design', "image-url": "/category 1/main.jpg", "rel-image1": "/category 1/ws1.jpg", "rel-image2": "/category 1/ws2.jpg", "rel-image3": "/category 1/ws3.jpg" },
+  { _id: 52, filter: 'Design', "image-url": "/cetegory 2/main.jpeg", "rel-image1": "/cetegory 2/bs1_1.jpeg", "rel-image2": "/cetegory 2/bs2_1 (1).jpeg", "rel-image3": "/cetegory 2/bs4.jpg" },
+  { _id: 53,  filter: 'Design', "image-url": "/category 1/main.jpg", "rel-image1": "/category 1/ws1.jpg", "rel-image2": "/category 1/ws2.jpg", "rel-image3": "/category 1/ws3.jpg" },
+  { _id: 54, filter: 'Design', "image-url": "/cetegory 2/main.jpeg", "rel-image1": "/cetegory 2/bs1_1.jpeg", "rel-image2": "/cetegory 2/bs2_1 (1).jpeg", "rel-image3": "/cetegory 2/bs4.jpg" },
+  { _id: 55,  filter: 'Design', "image-url": "/category 1/main.jpg", "rel-image1": "/category 1/ws1.jpg", "rel-image2": "/category 1/ws2.jpg", "rel-image3": "/category 1/ws3.jpg" },
+  { _id: 56, filter: 'Design', "image-url": "/cetegory 2/main.jpeg", "rel-image1": "/cetegory 2/bs1_1.jpeg", "rel-image2": "/cetegory 2/bs2_1 (1).jpeg", "rel-image3": "/cetegory 2/bs4.jpg" },
+  { _id: 57,  filter: 'Design', "image-url": "/category 1/main.jpg", "rel-image1": "/category 1/ws1.jpg", "rel-image2": "/category 1/ws2.jpg", "rel-image3": "/category 1/ws3.jpg" },
+  { _id: 58, filter: 'Design', "image-url": "/cetegory 2/main.jpeg", "rel-image1": "/cetegory 2/bs1_1.jpeg", "rel-image2": "/cetegory 2/bs2_1 (1).jpeg", "rel-image3": "/cetegory 2/bs4.jpg" },
+  { _id: 59,  filter: 'Design', "image-url": "/category 1/main.jpg", "rel-image1": "/category 1/ws1.jpg", "rel-image2": "/category 1/ws2.jpg", "rel-image3": "/category 1/ws3.jpg" },
+  { _id: 60, filter: 'Design', "image-url": "/cetegory 2/main.jpeg", "rel-image1": "/cetegory 2/bs1_1.jpeg", "rel-image2": "/cetegory 2/bs2_1 (1).jpeg", "rel-image3": "/cetegory 2/bs4.jpg" },
+  { _id: 61, filter: 'Design', "image-url": "/cetegory 2/main.jpeg", "rel-image1": "/cetegory 2/bs1_1.jpeg", "rel-image2": "/cetegory 2/bs2_1 (1).jpeg", "rel-image3": "/cetegory 2/bs4.jpg" },
+  { _id: 62,  filter: 'Design', "image-url": "/category 1/main.jpg", "rel-image1": "/category 1/ws1.jpg", "rel-image2": "/category 1/ws2.jpg", "rel-image3": "/category 1/ws3.jpg" },
+  { _id: 63, filter: 'Design', "image-url": "/cetegory 2/main.jpeg", "rel-image1": "/cetegory 2/bs1_1.jpeg", "rel-image2": "/cetegory 2/bs2_1 (1).jpeg", "rel-image3": "/cetegory 2/bs4.jpg" },
+  { _id: 64,  filter: 'Design', "image-url": "/category 1/main.jpg", "rel-image1": "/category 1/ws1.jpg", "rel-image2": "/category 1/ws2.jpg", "rel-image3": "/category 1/ws3.jpg" },
+  { _id: 65, filter: 'Design', "image-url": "/cetegory 2/main.jpeg", "rel-image1": "/cetegory 2/bs1_1.jpeg", "rel-image2": "/cetegory 2/bs2_1 (1).jpeg", "rel-image3": "/cetegory 2/bs4.jpg" },
+  { _id: 66,  filter: 'Design', "image-url": "/category 1/main.jpg", "rel-image1": "/category 1/ws1.jpg", "rel-image2": "/category 1/ws2.jpg", "rel-image3": "/category 1/ws3.jpg" },
+  { _id: 67, filter: 'Design', "image-url": "/cetegory 2/main.jpeg", "rel-image1": "/cetegory 2/bs1_1.jpeg", "rel-image2": "/cetegory 2/bs2_1 (1).jpeg", "rel-image3": "/cetegory 2/bs4.jpg" },
+  { _id: 68,  filter: 'Design', "image-url": "/category 1/main.jpg", "rel-image1": "/category 1/ws1.jpg", "rel-image2": "/category 1/ws2.jpg", "rel-image3": "/category 1/ws3.jpg" },
+  { _id: 69, filter: 'Design', "image-url": "/cetegory 2/main.jpeg", "rel-image1": "/cetegory 2/bs1_1.jpeg", "rel-image2": "/cetegory 2/bs2_1 (1).jpeg", "rel-image3": "/cetegory 2/bs4.jpg" },
+  { _id: 70,  filter: 'Design', "image-url": "/category 1/main.jpg", "rel-image1": "/category 1/ws1.jpg", "rel-image2": "/category 1/ws2.jpg", "rel-image3": "/category 1/ws3.jpg" },
+  { _id: 71, filter: 'Design', "image-url": "/cetegory 2/main.jpeg", "rel-image1": "/cetegory 2/bs1_1.jpeg", "rel-image2": "/cetegory 2/bs2_1 (1).jpeg", "rel-image3": "/cetegory 2/bs4.jpg" },
+ 
+  { _id: 72, filter: 'Design', "image-url": "/cetegory 2/main.jpeg", "rel-image1": "/cetegory 2/bs1_1.jpeg", "rel-image2": "/cetegory 2/bs2_1 (1).jpeg", "rel-image3": "/cetegory 2/bs4.jpg" },
+ 
+  
+  
+  
+  ////////////////////////////////////////////////////Sourcing///////////////////////////////////////////////////////////
+  {   filter: 'Sourcing', "image-url": "/sourcing.png" ,special: "yes" },
+  { _id: 73, filter: 'Sourcing', "image-url": "/sourcing/1/1.jpg", "rel-image1": "/sourcing/1/2.jpg", "rel-image2": "/sourcing/1/3.jpg", "rel-image3": "/sourcing/1/1.jpg" },
+  { _id: 74, filter: 'Sourcing', "image-url": "/sourcing/2/1.jpg", "rel-image1": "/sourcing/2/2.jpg", "rel-image2": "/sourcing/2/3.jpg", "rel-image3": "/sourcing/2/4.jpg" },
+  { _id: 75, filter: 'Sourcing', "image-url": "/sourcing/3/1.jpg", "rel-image1": "/sourcing/3/2.jpg", "rel-image2": "/sourcing/3/3.jpg", "rel-image3": "/sourcing/3/4.jpg" },
+  { _id: 76, filter: 'Sourcing', "image-url": "/sourcing/4/1.jpg", "rel-image1": "/sourcing/4/2.jpg", "rel-image2": "/sourcing/4/3.jpg", "rel-image3": "/sourcing/4/4.jpg" },
+  { _id: 77, filter: 'Sourcing', "image-url": "/sourcing/5/1.jpg", "rel-image1": "/sourcing53/2.jpg", "rel-image2": "/sourcing/5/3.jpg", "rel-image3": "/sourcing/5/4.jpg" },
+  { _id: 78, filter: 'Sourcing', "image-url": "/sourcing/6/1.jpg", "rel-image1": "/sourcing/6/2.jpg", "rel-image2": "/sourcing/6/3.jpg", "rel-image3": "/sourcing/6/4.jpg" },
+  { _id: 79, filter: 'Sourcing', "image-url": "/sourcing/1/1.jpg", "rel-image1": "/sourcing/1/2.jpg", "rel-image2": "/sourcing/1/3.jpg", "rel-image3": "/sourcing/1/1.jpg" },
+  { _id: 80, filter: 'Sourcing', "image-url": "/sourcing/2/1.jpg", "rel-image1": "/sourcing/2/2.jpg", "rel-image2": "/sourcing/2/3.jpg", "rel-image3": "/sourcing/2/4.jpg" },
+  { _id: 81, filter: 'Sourcing', "image-url": "/sourcing/3/1.jpg", "rel-image1": "/sourcing/3/2.jpg", "rel-image2": "/sourcing/3/3.jpg", "rel-image3": "/sourcing/3/4.jpg" },
+  { _id: 82, filter: 'Sourcing', "image-url": "/sourcing/4/1.jpg", "rel-image1": "/sourcing/4/2.jpg", "rel-image2": "/sourcing/4/3.jpg", "rel-image3": "/sourcing/4/4.jpg" },
+  { _id: 83, filter: 'Sourcing', "image-url": "/sourcing/5/1.jpg", "rel-image1": "/sourcing53/2.jpg", "rel-image2": "/sourcing/5/3.jpg", "rel-image3": "/sourcing/5/4.jpg" },
+  { _id: 84, filter: 'Sourcing', "image-url": "/sourcing/6/1.jpg", "rel-image1": "/sourcing/6/2.jpg", "rel-image2": "/sourcing/6/3.jpg", "rel-image3": "/sourcing/6/4.jpg" }, 
+  { _id: 85, filter: 'Sourcing', "image-url": "/sourcing/2/1.jpg", "rel-image1": "/sourcing/2/2.jpg", "rel-image2": "/sourcing/2/3.jpg", "rel-image3": "/sourcing/2/4.jpg" },
+  { _id: 86, filter: 'Sourcing', "image-url": "/sourcing/3/1.jpg", "rel-image1": "/sourcing/3/2.jpg", "rel-image2": "/sourcing/3/3.jpg", "rel-image3": "/sourcing/3/4.jpg" },
+  { _id: 87, filter: 'Sourcing', "image-url": "/sourcing/4/1.jpg", "rel-image1": "/sourcing/4/2.jpg", "rel-image2": "/sourcing/4/3.jpg", "rel-image3": "/sourcing/4/4.jpg" },
+  { _id: 88, filter: 'Sourcing', "image-url": "/sourcing/5/1.jpg", "rel-image1": "/sourcing53/2.jpg", "rel-image2": "/sourcing/5/3.jpg", "rel-image3": "/sourcing/5/4.jpg" },
+  { _id: 89, filter: 'Sourcing', "image-url": "/sourcing/6/1.jpg", "rel-image1": "/sourcing/6/2.jpg", "rel-image2": "/sourcing/6/3.jpg", "rel-image3": "/sourcing/6/4.jpg" }, 
+  { _id: 90, filter: 'Sourcing', "image-url": "/sourcing/2/1.jpg", "rel-image1": "/sourcing/2/2.jpg", "rel-image2": "/sourcing/2/3.jpg", "rel-image3": "/sourcing/2/4.jpg" },
+  { _id: 91, filter: 'Sourcing', "image-url": "/sourcing/3/1.jpg", "rel-image1": "/sourcing/3/2.jpg", "rel-image2": "/sourcing/3/3.jpg", "rel-image3": "/sourcing/3/4.jpg" },
+  { _id: 92, filter: 'Sourcing', "image-url": "/sourcing/4/1.jpg", "rel-image1": "/sourcing/4/2.jpg", "rel-image2": "/sourcing/4/3.jpg", "rel-image3": "/sourcing/4/4.jpg" },
+  { _id: 93, filter: 'Sourcing', "image-url": "/sourcing/5/1.jpg", "rel-image1": "/sourcing53/2.jpg", "rel-image2": "/sourcing/5/3.jpg", "rel-image3": "/sourcing/5/4.jpg" },
+  { _id: 94, filter: 'Sourcing', "image-url": "/sourcing/6/1.jpg", "rel-image1": "/sourcing/6/2.jpg", "rel-image2": "/sourcing/6/3.jpg", "rel-image3": "/sourcing/6/4.jpg" }, 
+  { _id: 95, filter: 'Sourcing', "image-url": "/sourcing/2/1.jpg", "rel-image1": "/sourcing/2/2.jpg", "rel-image2": "/sourcing/2/3.jpg", "rel-image3": "/sourcing/2/4.jpg" },
+  { _id: 96, filter: 'Sourcing', "image-url": "/sourcing/3/1.jpg", "rel-image1": "/sourcing/3/2.jpg", "rel-image2": "/sourcing/3/3.jpg", "rel-image3": "/sourcing/3/4.jpg" },
+  { _id: 97, filter: 'Sourcing', "image-url": "/sourcing/4/1.jpg", "rel-image1": "/sourcing/4/2.jpg", "rel-image2": "/sourcing/4/3.jpg", "rel-image3": "/sourcing/4/4.jpg" },
+  { _id: 98, filter: 'Sourcing', "image-url": "/sourcing/5/1.jpg", "rel-image1": "/sourcing53/2.jpg", "rel-image2": "/sourcing/5/3.jpg", "rel-image3": "/sourcing/5/4.jpg" },
+  { _id: 99, filter: 'Sourcing', "image-url": "/sourcing/6/1.jpg", "rel-image1": "/sourcing/6/2.jpg", "rel-image2": "/sourcing/6/3.jpg", "rel-image3": "/sourcing/6/4.jpg" }, 
+  { _id: 100, filter: 'Sourcing', "image-url": "/sourcing/2/1.jpg", "rel-image1": "/sourcing/2/2.jpg", "rel-image2": "/sourcing/2/3.jpg", "rel-image3": "/sourcing/2/4.jpg" },
+  { _id: 101, filter: 'Sourcing', "image-url": "/sourcing/3/1.jpg", "rel-image1": "/sourcing/3/2.jpg", "rel-image2": "/sourcing/3/3.jpg", "rel-image3": "/sourcing/3/4.jpg" },
+  { _id: 102, filter: 'Sourcing', "image-url": "/sourcing/4/1.jpg", "rel-image1": "/sourcing/4/2.jpg", "rel-image2": "/sourcing/4/3.jpg", "rel-image3": "/sourcing/4/4.jpg" },
+  { _id: 103, filter: 'Sourcing', "image-url": "/sourcing/5/1.jpg", "rel-image1": "/sourcing53/2.jpg", "rel-image2": "/sourcing/5/3.jpg", "rel-image3": "/sourcing/5/4.jpg" },
+  { _id: 104, filter: 'Sourcing', "image-url": "/sourcing/6/1.jpg", "rel-image1": "/sourcing/6/2.jpg", "rel-image2": "/sourcing/6/3.jpg", "rel-image3": "/sourcing/6/4.jpg" }, 
+  { _id: 105, filter: 'Sourcing', "image-url": "/sourcing/2/1.jpg", "rel-image1": "/sourcing/2/2.jpg", "rel-image2": "/sourcing/2/3.jpg", "rel-image3": "/sourcing/2/4.jpg" },
+  { _id: 106, filter: 'Sourcing', "image-url": "/sourcing/3/1.jpg", "rel-image1": "/sourcing/3/2.jpg", "rel-image2": "/sourcing/3/3.jpg", "rel-image3": "/sourcing/3/4.jpg" },
+  { _id: 107, filter: 'Sourcing', "image-url": "/sourcing/4/1.jpg", "rel-image1": "/sourcing/4/2.jpg", "rel-image2": "/sourcing/4/3.jpg", "rel-image3": "/sourcing/4/4.jpg" },
+  { _id: 108, filter: 'Sourcing', "image-url": "/sourcing/5/1.jpg", "rel-image1": "/sourcing53/2.jpg", "rel-image2": "/sourcing/5/3.jpg", "rel-image3": "/sourcing/5/4.jpg" },
+
+  
+
+
+
+  ///////////////////////////////////////////////////////////////Advisory////////////////////////////////////////////////
+  {   filter: 'advisory', "image-url": "/advisory.png" ,special: "yes" },
+  { _id: 10, filter: 'advisory', "image-url": "/New folder/Pictures/4/5.jpg", "rel-image1": "/New folder/Pictures/4/6.jpg", "rel-image2": "/New folder/Pictures/4/7.jpg", "rel-image3": "/New folder/Pictures/1/11.jpg" },
+  { _id: 11, filter: 'advisory', "image-url": "/New folder/Pictures/6/10.jpg", "rel-image1": "/New folder/Pictures/6/11.jpg", "rel-image2": "/New folder/Pictures/6/12.jpg", "rel-image3": "/New folder/Pictures/1/11.jpg" },
+  { _id: 10, filter: 'advisory', "image-url": "/New folder/Pictures/4/5.jpg", "rel-image1": "/New folder/Pictures/4/6.jpg", "rel-image2": "/New folder/Pictures/4/7.jpg", "rel-image3": "/New folder/Pictures/1/11.jpg" },
+  { _id: 11, filter: 'advisory', "image-url": "/New folder/Pictures/6/10.jpg", "rel-image1": "/New folder/Pictures/6/11.jpg", "rel-image2": "/New folder/Pictures/6/12.jpg", "rel-image3": "/New folder/Pictures/1/11.jpg" },
+  { _id: 10, filter: 'advisory', "image-url": "/New folder/Pictures/4/5.jpg", "rel-image1": "/New folder/Pictures/4/6.jpg", "rel-image2": "/New folder/Pictures/4/7.jpg", "rel-image3": "/New folder/Pictures/1/11.jpg" },
+  { _id: 11, filter: 'advisory', "image-url": "/New folder/Pictures/6/10.jpg", "rel-image1": "/New folder/Pictures/6/11.jpg", "rel-image2": "/New folder/Pictures/6/12.jpg", "rel-image3": "/New folder/Pictures/1/11.jpg" },
+  { _id: 10, filter: 'advisory', "image-url": "/New folder/Pictures/4/5.jpg", "rel-image1": "/New folder/Pictures/4/6.jpg", "rel-image2": "/New folder/Pictures/4/7.jpg", "rel-image3": "/New folder/Pictures/1/11.jpg" },
+  { _id: 11, filter: 'advisory', "image-url": "/New folder/Pictures/6/10.jpg", "rel-image1": "/New folder/Pictures/6/11.jpg", "rel-image2": "/New folder/Pictures/6/12.jpg", "rel-image3": "/New folder/Pictures/1/11.jpg" },
+  { _id: 10, filter: 'advisory', "image-url": "/New folder/Pictures/4/5.jpg", "rel-image1": "/New folder/Pictures/4/6.jpg", "rel-image2": "/New folder/Pictures/4/7.jpg", "rel-image3": "/New folder/Pictures/1/11.jpg" },
+  { _id: 11, filter: 'advisory', "image-url": "/New folder/Pictures/6/10.jpg", "rel-image1": "/New folder/Pictures/6/11.jpg", "rel-image2": "/New folder/Pictures/6/12.jpg", "rel-image3": "/New folder/Pictures/1/11.jpg" },
+  { _id: 10, filter: 'advisory', "image-url": "/New folder/Pictures/4/5.jpg", "rel-image1": "/New folder/Pictures/4/6.jpg", "rel-image2": "/New folder/Pictures/4/7.jpg", "rel-image3": "/New folder/Pictures/1/11.jpg" },
+  { _id: 11, filter: 'advisory', "image-url": "/New folder/Pictures/6/10.jpg", "rel-image1": "/New folder/Pictures/6/11.jpg", "rel-image2": "/New folder/Pictures/6/12.jpg", "rel-image3": "/New folder/Pictures/1/11.jpg" },
+  { _id: 10, filter: 'advisory', "image-url": "/New folder/Pictures/4/5.jpg", "rel-image1": "/New folder/Pictures/4/6.jpg", "rel-image2": "/New folder/Pictures/4/7.jpg", "rel-image3": "/New folder/Pictures/1/11.jpg" },
+  { _id: 11, filter: 'advisory', "image-url": "/New folder/Pictures/6/10.jpg", "rel-image1": "/New folder/Pictures/6/11.jpg", "rel-image2": "/New folder/Pictures/6/12.jpg", "rel-image3": "/New folder/Pictures/1/11.jpg" },
+  { _id: 10, filter: 'advisory', "image-url": "/New folder/Pictures/4/5.jpg", "rel-image1": "/New folder/Pictures/4/6.jpg", "rel-image2": "/New folder/Pictures/4/7.jpg", "rel-image3": "/New folder/Pictures/1/11.jpg" },
+  { _id: 11, filter: 'advisory', "image-url": "/New folder/Pictures/6/10.jpg", "rel-image1": "/New folder/Pictures/6/11.jpg", "rel-image2": "/New folder/Pictures/6/12.jpg", "rel-image3": "/New folder/Pictures/1/11.jpg" },
+  { _id: 10, filter: 'advisory', "image-url": "/New folder/Pictures/4/5.jpg", "rel-image1": "/New folder/Pictures/4/6.jpg", "rel-image2": "/New folder/Pictures/4/7.jpg", "rel-image3": "/New folder/Pictures/1/11.jpg" },
+  { _id: 11, filter: 'advisory', "image-url": "/New folder/Pictures/6/10.jpg", "rel-image1": "/New folder/Pictures/6/11.jpg", "rel-image2": "/New folder/Pictures/6/12.jpg", "rel-image3": "/New folder/Pictures/1/11.jpg" },
+  { _id: 10, filter: 'advisory', "image-url": "/New folder/Pictures/4/5.jpg", "rel-image1": "/New folder/Pictures/4/6.jpg", "rel-image2": "/New folder/Pictures/4/7.jpg", "rel-image3": "/New folder/Pictures/1/11.jpg" },
+  { _id: 11, filter: 'advisory', "image-url": "/New folder/Pictures/6/10.jpg", "rel-image1": "/New folder/Pictures/6/11.jpg", "rel-image2": "/New folder/Pictures/6/12.jpg", "rel-image3": "/New folder/Pictures/1/11.jpg" },
+  { _id: 10, filter: 'advisory', "image-url": "/New folder/Pictures/4/5.jpg", "rel-image1": "/New folder/Pictures/4/6.jpg", "rel-image2": "/New folder/Pictures/4/7.jpg", "rel-image3": "/New folder/Pictures/1/11.jpg" },
+  { _id: 11, filter: 'advisory', "image-url": "/New folder/Pictures/6/10.jpg", "rel-image1": "/New folder/Pictures/6/11.jpg", "rel-image2": "/New folder/Pictures/6/12.jpg", "rel-image3": "/New folder/Pictures/1/11.jpg" },
+  { _id: 10, filter: 'advisory', "image-url": "/New folder/Pictures/4/5.jpg", "rel-image1": "/New folder/Pictures/4/6.jpg", "rel-image2": "/New folder/Pictures/4/7.jpg", "rel-image3": "/New folder/Pictures/1/11.jpg" },
+  { _id: 11, filter: 'advisory', "image-url": "/New folder/Pictures/6/10.jpg", "rel-image1": "/New folder/Pictures/6/11.jpg", "rel-image2": "/New folder/Pictures/6/12.jpg", "rel-image3": "/New folder/Pictures/1/11.jpg" },
+  { _id: 10, filter: 'advisory', "image-url": "/New folder/Pictures/4/5.jpg", "rel-image1": "/New folder/Pictures/4/6.jpg", "rel-image2": "/New folder/Pictures/4/7.jpg", "rel-image3": "/New folder/Pictures/1/11.jpg" },
+  { _id: 11, filter: 'advisory', "image-url": "/New folder/Pictures/6/10.jpg", "rel-image1": "/New folder/Pictures/6/11.jpg", "rel-image2": "/New folder/Pictures/6/12.jpg", "rel-image3": "/New folder/Pictures/1/11.jpg" },
+  { _id: 10, filter: 'advisory', "image-url": "/New folder/Pictures/4/5.jpg", "rel-image1": "/New folder/Pictures/4/6.jpg", "rel-image2": "/New folder/Pictures/4/7.jpg", "rel-image3": "/New folder/Pictures/1/11.jpg" },
+  { _id: 11, filter: 'advisory', "image-url": "/New folder/Pictures/6/10.jpg", "rel-image1": "/New folder/Pictures/6/11.jpg", "rel-image2": "/New folder/Pictures/6/12.jpg", "rel-image3": "/New folder/Pictures/1/11.jpg" },
+  { _id: 10, filter: 'advisory', "image-url": "/New folder/Pictures/4/5.jpg", "rel-image1": "/New folder/Pictures/4/6.jpg", "rel-image2": "/New folder/Pictures/4/7.jpg", "rel-image3": "/New folder/Pictures/1/11.jpg" },
+  { _id: 11, filter: 'advisory', "image-url": "/New folder/Pictures/6/10.jpg", "rel-image1": "/New folder/Pictures/6/11.jpg", "rel-image2": "/New folder/Pictures/6/12.jpg", "rel-image3": "/New folder/Pictures/1/11.jpg" },
+  { _id: 10, filter: 'advisory', "image-url": "/New folder/Pictures/4/5.jpg", "rel-image1": "/New folder/Pictures/4/6.jpg", "rel-image2": "/New folder/Pictures/4/7.jpg", "rel-image3": "/New folder/Pictures/1/11.jpg" },
+  { _id: 11, filter: 'advisory', "image-url": "/New folder/Pictures/6/10.jpg", "rel-image1": "/New folder/Pictures/6/11.jpg", "rel-image2": "/New folder/Pictures/6/12.jpg", "rel-image3": "/New folder/Pictures/1/11.jpg" },
+  { _id: 10, filter: 'advisory', "image-url": "/New folder/Pictures/4/5.jpg", "rel-image1": "/New folder/Pictures/4/6.jpg", "rel-image2": "/New folder/Pictures/4/7.jpg", "rel-image3": "/New folder/Pictures/1/11.jpg" },
+  { _id: 11, filter: 'advisory', "image-url": "/New folder/Pictures/6/10.jpg", "rel-image1": "/New folder/Pictures/6/11.jpg", "rel-image2": "/New folder/Pictures/6/12.jpg", "rel-image3": "/New folder/Pictures/1/11.jpg" },
+  { _id: 10, filter: 'advisory', "image-url": "/New folder/Pictures/4/5.jpg", "rel-image1": "/New folder/Pictures/4/6.jpg", "rel-image2": "/New folder/Pictures/4/7.jpg", "rel-image3": "/New folder/Pictures/1/11.jpg" },
+  { _id: 11, filter: 'advisory', "image-url": "/New folder/Pictures/6/10.jpg", "rel-image1": "/New folder/Pictures/6/11.jpg", "rel-image2": "/New folder/Pictures/6/12.jpg", "rel-image3": "/New folder/Pictures/1/11.jpg" },
+
+];
+
+// Function to categorize images
+export const categorizeImages = (images) => {
+  const categories = {
+    manufacturing: [],
+    sourcing: [],
+    design: [],
+    advisory: [],
+  };
+
+  images.forEach((image) => {
+    const category = image.filter?.toLowerCase(); // Ensure case-insensitivity
+    if (categories[category]) {
+      categories[category].push(image);
+    }
+  });
+
+  return categories;
+};
+
+// Default export for the images array
+export default images;

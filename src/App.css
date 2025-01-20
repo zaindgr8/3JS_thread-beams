@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.main-cnvs{
+    width: 100vw;
+    height: 300vh;
+}
+.nav-items{
+ font-family: "Montserrat", serif;
+ font-weight: 600;
+ font-size: 16px;
+}
+.filter-main{
+    font-family: "Montserrat", serif;
+    font-weight: 500;
+}
